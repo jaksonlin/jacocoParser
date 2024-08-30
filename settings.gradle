@@ -11,4 +11,4 @@ plugins {
 }
 
 rootProject.name = 'jacocoParser'
-include('app')
+include('reportParser')

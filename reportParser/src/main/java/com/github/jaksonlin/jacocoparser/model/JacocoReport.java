@@ -45,7 +45,7 @@ public class JacocoReport {
     public static JacocoReport newJacocoReportFromURL(String url) throws Exception {
 
         byte[] body = Util.DownloadWebPage(url);
-        // jacoco 页面table提取
+
         Document doc = Jsoup.parse(new String(body));
         Element title = doc.select("h1").first();
         if (title == null) {
@@ -146,7 +146,7 @@ public class JacocoReport {
         }
 
         String url = this.initializeUrl;
-        // 修正url地址以便拼接
+
         if (url.endsWith("index.html")) {
             url = url.substring(0, url.length() - "index.html".length());
         }
