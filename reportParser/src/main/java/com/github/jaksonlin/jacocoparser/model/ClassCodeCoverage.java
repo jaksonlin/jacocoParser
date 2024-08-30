@@ -23,6 +23,10 @@ public class ClassCodeCoverage {
     String packageName;
     JacocoReportRecord record;
 
+    public String getFullyQualifiedClassName() {
+        return this.packageName + "." + this.className;
+    }
+
     public List<Integer> getCoveredLines() {
         return coveredLines;
     }
