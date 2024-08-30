@@ -4,6 +4,8 @@
 package com.github.jaksonlin.jacocoparser;
 
 
+import com.github.jaksonlin.jacocoparser.facade.IJacocoReportParser;
+import com.github.jaksonlin.jacocoparser.facade.JacocoParserFactory;
 import com.github.jaksonlin.jacocoparser.model.ClassCodeCoverage;
 import com.github.jaksonlin.jacocoparser.model.JacocoReport;
 import org.junit.Assert;
@@ -53,4 +55,30 @@ public class TestJacocoReport {
             Assert.fail();
         }
     }
+
+    @Test
+    public void TestFacade() {
+        try {
+            String url = "http://127.0.0.1:28080/html/index.html";
+
+            IJacocoReportParser parser = JacocoParserFactory.NewHtmlReportParser();
+            List<ClassCodeCoverage> cov = parser.GetClassCodeCoverages(url);
+            if (cov.isEmpty()) {
+                System.out.println("TestFacade failed");
+                Assert.fail();
+            }
+            for (ClassCodeCoverage c : cov) {
+                if (c.getClassName().isEmpty()) {
+                    Assert.fail();
+                }
+                if (c.getPackageName().isEmpty()) {
+                    Assert.fail();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Assert.fail();
+        }
+    }
+
 }

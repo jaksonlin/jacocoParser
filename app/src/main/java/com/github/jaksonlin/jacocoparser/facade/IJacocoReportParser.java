@@ -5,10 +5,10 @@ import com.github.jaksonlin.jacocoparser.model.JacocoReport;
 
 import java.util.List;
 
-public interface ReportParser {
+public interface IJacocoReportParser {
     List<ClassCodeCoverage> GetClassCodeCoverages(String reportUrl) throws Exception;
 }
-class ReportParserImpl implements ReportParser{
+class JacocoHtmlReportParserImpl implements IJacocoReportParser {
     public List<ClassCodeCoverage> GetClassCodeCoverages(String reportUrl) throws Exception {
         JacocoReport report = JacocoReport.newJacocoReportFromURL(reportUrl);
         return report.collectClassCodeCoverage();
