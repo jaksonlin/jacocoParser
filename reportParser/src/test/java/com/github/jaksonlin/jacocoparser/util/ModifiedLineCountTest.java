@@ -129,22 +129,54 @@ public class ModifiedLineCountTest {
 
     @Test
     public void testLongWrappedLine() throws IOException {
-    String testCode = 
+        String testCode = 
+            "public class TestClass {\n" +
+            "    public void methodWithLongLine() {\n" +
+            "        String longLine = \"This is a very long line of code that might be wrapped in an editor \" +\n" +
+            "                          \"but is actually just one line as far as Java and Jacoco are concerned\";\n" +
+            "    }\n" +
+            "}";
+
+        File file = tempFolder.newFile("TestClass.java");
+        Files.write(file.toPath(), testCode.getBytes());
+
+        List<Integer> modifiedLines = Arrays.asList(1, 2, 3, 4, 5);
+        Map<String, Integer> result = modifiedLineCount.extractFunctionLines(file.getPath(), modifiedLines);
+
+        assertEquals(1, result.size());
+        assertTrue(result.containsKey("methodWithLongLine"));
+        assertEquals(Integer.valueOf(3), result.get("methodWithLongLine")); // 3 lines: method signature, long line, closing brace
+    }
+
+    @Test
+    public void testMultiLineConstructs() throws IOException {
+        String testCode = 
         "public class TestClass {\n" +
-        "    public void methodWithLongLine() {\n" +
-        "        String longLine = \"This is a very long line of code that might be wrapped in an editor \" +\n" +
-        "                          \"but is actually just one line as far as Java and Jacoco are concerned\";\n" +
+        "    @SuppressWarnings({\n" +
+        "        \"deprecation\",\n" +
+        "        \"unchecked\"\n" +
+        "    })\n" +
+        "    public void methodWithMultiLineConstructs() {\n" +
+        "        String s = \"Hello \" +\n" +
+        "\n" +
+        "                   \"World\" +\n" +
+        "\n" +
+        "                   \"!\";\n" +
+        "        System.out.println(s);\n" +
+        "        int x = (1 + 2 +\n" +
+        "                 3 + 4);\n" +
         "    }\n" +
         "}";
 
-    File file = tempFolder.newFile("TestClass.java");
-    Files.write(file.toPath(), testCode.getBytes());
+        File file = tempFolder.newFile("TestClass.java");
+        Files.write(file.toPath(), testCode.getBytes());
 
-    List<Integer> modifiedLines = Arrays.asList(1, 2, 3, 4, 5);
-    Map<String, Integer> result = modifiedLineCount.extractFunctionLines(file.getPath(), modifiedLines);
-
-    assertEquals(1, result.size());
-    assertTrue(result.containsKey("methodWithLongLine"));
-    assertEquals(Integer.valueOf(3), result.get("methodWithLongLine")); // 3 lines: method signature, long line, closing brace
-}
+        List<Integer> modifiedLines = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+        Map<String, Integer> result = modifiedLineCount.extractFunctionLines(file.getPath(), modifiedLines);
+        
+        assertEquals(1, result.size());
+        assertTrue(result.containsKey("methodWithMultiLineConstructs"));
+        assertEquals(Integer.valueOf(5), result.get("methodWithMultiLineConstructs"));
+        // 5 lines: method signature, string assignment, println, int assignment, closing brace
+    }
 }
