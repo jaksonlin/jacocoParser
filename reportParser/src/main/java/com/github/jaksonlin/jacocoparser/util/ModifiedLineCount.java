@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
  * Handling multi-line comments
  * Treating wrapped long lines as single lines (matching Jacoco's behavior)
  * Excluding class property modifications
+ * Counting lines in methods with actual code changes
  */
 public class ModifiedLineCount {
     public Map<String, Integer> extractFunctionLines(String filePath, List<Integer> modifiedLines) throws IOException {
