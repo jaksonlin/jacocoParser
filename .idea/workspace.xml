@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b44ef661-f49e-4aff-8fb0-2fdf4ec277cc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportParser/src/main/java/com/github/jaksonlin/jacocoparser/model/ClassCodeCoverage.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportParser/src/main/java/com/github/jaksonlin/jacocoparser/model/ClassCodeCoverage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
