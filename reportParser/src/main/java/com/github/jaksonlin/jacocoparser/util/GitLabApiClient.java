@@ -28,7 +28,7 @@ public class GitLabApiClient {
         String url = String.format("%s/api/v4/projects/%s/repository/compare?from=%s&to=%s&straight=true",
                 baseUrl, projectId, from, to);
         HttpGet request = new HttpGet(url);
-        if (privateToken != null) {
+        if (privateToken != null && !privateToken.isEmpty()) {
             request.addHeader("PRIVATE-TOKEN", privateToken);
         }
 
