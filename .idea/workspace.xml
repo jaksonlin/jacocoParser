@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b44ef661-f49e-4aff-8fb0-2fdf4ec277cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/reportParser/src/test/resources/mysettings.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportParser/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/reportParser/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportParser/src/main/java/com/github/jaksonlin/jacocoparser/util/DiffParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportParser/src/main/java/com/github/jaksonlin/jacocoparser/util/DiffParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportParser/src/test/java/com/github/jaksonlin/jacocoparser/GitLabCoverageAnalyzerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportParser/src/test/java/com/github/jaksonlin/jacocoparser/GitLabCoverageAnalyzerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +58,10 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Gradle.Build jacocoParser.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GitLabCoverageAnalyzerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GitLabCoverageAnalyzerTest.testAnalyzeModifiedCode.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ModifiedLineCountTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ModifiedLineCountTest.testExtractFunctionLines.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestDiffParser.testDiffParser.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestJacocoReport.TestFacade.executor&quot;: &quot;Debug&quot;,
     &quot;Gradle.jacocoParser [build].executor&quot;: &quot;Run&quot;,
@@ -71,7 +78,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.TestJacocoReport">
+  <component name="RunManager" selected="Gradle.GitLabCoverageAnalyzerTest">
     <configuration name="GitLabCoverageAnalyzerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -93,7 +100,75 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="GitLabCoverageAnalyzerTest.testAnalyzeModifiedCode" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":reportParser:test" />
+            <option value="--tests" />
+            <option value="&quot;com.github.jaksonlin.jacocoparser.GitLabCoverageAnalyzerTest.testAnalyzeModifiedCode&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedLineCountTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":reportParser:test" />
+            <option value="--tests" />
+            <option value="&quot;com.github.jaksonlin.jacocoparser.util.ModifiedLineCountTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedLineCountTest.testExtractFunctionLines" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":reportParser:test" />
+            <option value="--tests" />
+            <option value="&quot;com.github.jaksonlin.jacocoparser.util.ModifiedLineCountTest.testExtractFunctionLines&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="TestDiffParser.testDiffParser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -117,88 +192,24 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestJacocoReport" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":reportParser:test" />
-            <option value="--tests" />
-            <option value="&quot;com.github.jaksonlin.jacocoparser.TestJacocoReport&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestJacocoReport.TestFacade" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":reportParser:test" />
-            <option value="--tests" />
-            <option value="&quot;com.github.jaksonlin.jacocoparser.TestJacocoReport.TestFacade&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="jacocoParser [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TestJacocoReport" />
         <item itemvalue="Gradle.GitLabCoverageAnalyzerTest" />
+        <item itemvalue="Gradle.GitLabCoverageAnalyzerTest.testAnalyzeModifiedCode" />
+        <item itemvalue="Gradle.ModifiedLineCountTest.testExtractFunctionLines" />
+        <item itemvalue="Gradle.ModifiedLineCountTest" />
         <item itemvalue="Gradle.TestDiffParser.testDiffParser" />
-        <item itemvalue="Gradle.TestJacocoReport.TestFacade" />
-        <item itemvalue="Gradle.jacocoParser [jar]" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
