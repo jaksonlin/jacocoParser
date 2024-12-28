@@ -43,6 +43,10 @@ public class DiffParser {
         
         return diffInfo;
     }
+
+    public static String HelloMessage() {
+        return "Hello";
+    }
     
     public static class DiffInfo {
         public List<Integer> addedLines = new ArrayList<>();
