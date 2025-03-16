@@ -92,4 +92,18 @@ public class TestDiffParser {
 
 
     }
+
+    @Test
+    public void testParseDiffWithIncorrectLineCount() {
+        // step 1
+        String diffContent = "--- a/file.java\n+++ b/file.java\n@@ -1,2 +1,3 @@\n+new line";
+        DiffParser parser = new DiffParser();
+        DiffParser.DiffInfo diffInfo = parser.parseDiff(diffContent);
+        // assert 1
+        // Assertion to ensure correct line counts
+        Assert.assertEquals(0, diffInfo.removedLines.size());
+        Assert.assertEquals(1, diffInfo.addedLines.size());
+    }
+
+
 }

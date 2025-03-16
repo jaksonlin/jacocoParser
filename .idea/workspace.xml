@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b44ef661-f49e-4aff-8fb0-2fdf4ec277cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportParser/src/main/java/com/github/jaksonlin/jacocoparser/util/SomeParent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportParser/src/main/java/com/github/jaksonlin/jacocoparser/model/GitLabCompareResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportParser/src/main/java/com/github/jaksonlin/jacocoparser/model/GitLabCompareResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportParser/src/main/java/com/github/jaksonlin/jacocoparser/util/DiffParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportParser/src/main/java/com/github/jaksonlin/jacocoparser/util/DiffParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportParser/src/test/java/com/github/jaksonlin/jacocoparser/util/ModifiedLineCountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportParser/src/test/java/com/github/jaksonlin/jacocoparser/util/ModifiedLineCountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reportParser/src/test/java/com/github/jaksonlin/jacocoparser/util/TestDiffParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/reportParser/src/test/java/com/github/jaksonlin/jacocoparser/util/TestDiffParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +99,7 @@
       <recent name="com.github.jaksonlin.jacocoparser.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TestDiffParser.HelloWorld">
+  <component name="RunManager" selected="Gradle.TestDiffParser.testParseDiffWithIncorrectLineCount">
     <configuration name="ModifiedLineCountTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -175,6 +169,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="TestDiffParser.testParseDiffWithIncorrectLineCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":reportParser:test" />
+            <option value="--tests" />
+            <option value="&quot;com.github.jaksonlin.jacocoparser.util.TestDiffParser.testParseDiffWithIncorrectLineCount&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="Tests in 'jacocoParser.reportParser'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -196,34 +213,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="jacocoParser [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TestDiffParser.testParseDiffWithIncorrectLineCount" />
         <item itemvalue="Gradle.TestDiffParser.HelloWorld" />
         <item itemvalue="Gradle.ModifiedLineCountTest" />
         <item itemvalue="Gradle.Tests in 'jacocoParser.reportParser'" />
         <item itemvalue="Gradle.TestDiffParser (1)" />
-        <item itemvalue="Gradle.jacocoParser [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -252,6 +248,11 @@
           <url>file://$PROJECT_DIR$/reportParser/src/test/java/com/github/jaksonlin/jacocoparser/TestJacocoReport.java</url>
           <line>69</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reportParser/src/test/java/com/github/jaksonlin/jacocoparser/util/TestDiffParser.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
