@@ -10,6 +10,7 @@ public class GitLabCompareResponse {
         return diffs;
     }
 
+    @Deprecated
     public void setDiffs(List<GitLabDiff> diffs) {
         this.diffs = diffs;
     }

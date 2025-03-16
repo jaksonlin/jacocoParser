@@ -1,12 +1,20 @@
 
 package com.github.jaksonlin.jacocoparser.util;
 
+import com.github.jaksonlin.jacocoparser.util.SomeParent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DiffParser {
+public class DiffParser extends SomeParent {
+
+    @Override
+    public void HelloWorld() {
+        super.HelloWorld();
+        System.out.println("From cuz");
+    }
+
     public static DiffInfo parseDiff(String diffString) {
         DiffInfo diffInfo = new DiffInfo();
         String[] lines = diffString.split("\n");

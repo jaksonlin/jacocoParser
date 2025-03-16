@@ -29,6 +29,7 @@ public class ModifiedLineCountTest {
 
     @Test
     public void testExtractFunctionLines() throws IOException {
+        // step 1//
         String testCode = 
             "public class TestClass {\n" +
             "    private int field1;\n" +
@@ -42,7 +43,7 @@ public class ModifiedLineCountTest {
             "        return a + b;\n" +
             "    }\n" +
             "}";
-
+    // assert
         File file = tempFolder.newFile("TestClass.java");
         Files.write(file.toPath(), testCode.getBytes());
 
