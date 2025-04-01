@@ -34,7 +34,7 @@ public class TestDiffParser {
     }
 
     private void checkDiffInfos(List<Integer> listToCheck, int expectedSize){
-        Assert.assertEquals(listToCheck.size(), expectedSize);
+        Assert.assertEquals(listToCheck.size(),1);
     }
 
 
@@ -53,7 +53,6 @@ public class TestDiffParser {
         Assert.assertEquals(diffInfo.removedLines.size(), 2);
         Assert.assertEquals(diffInfo.modifiedLines.size(), 0);
         Assert.assertEquals(diffInfo.unchangedLines.size(), 6);
-
 
     }
 

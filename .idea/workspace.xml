@@ -251,7 +251,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/reportParser/src/test/java/com/github/jaksonlin/jacocoparser/util/TestDiffParser.java</url>
-          <line>105</line>
+          <line>104</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
